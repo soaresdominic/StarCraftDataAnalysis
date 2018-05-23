@@ -1,8 +1,11 @@
 # StarCraftDataAnalysis
-Classifier for competitive StarCraft league ranking
+Classifier for predicting the league ranking (1-8) of players of the videogame StarCraft.
 
 ### Description
 The contents include about 3400 instances of individual matches within the game and the person that was playing. All the data is tied to the person, where each person has an age, league, and number of hours they spend playing the game each week along with the total number of hours they have played in their lifetime since the game came out in 2010. There are 21 attributes in the dataset total that represents the players statistics for the individual game played. I will try to predict the league a player is in by using the data from individual games.
+
+### Youtube Video Demo
+[![StarCraft Data Analysis](https://img.youtube.com/vi/UnXQ9eUXLWE/maxresdefault.jpg)](https://youtu.be/UnXQ9eUXLWE "StarCraft Data Analysis")
 
 ### Process
 All of the data is continuous with the exception of the league a player is in. Summary statistics were calculated for each attribute per league, while the most notable was the number of instances per league, where most of the instances had a player in league four or five. This may give false positives later if it were to just guess league 4 or 5, as it would be right a little less than 25% of the time by default.
