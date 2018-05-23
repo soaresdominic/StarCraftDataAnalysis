@@ -61,9 +61,9 @@ def dec_tree(table):
     print "Decision Tree"
     print "Accuracy: ",
     print round(TPd/float(Pd) * 100,2),"%","",
-    print "Error rate: ",
-    print round(abs(100 - (TPd/float(Pd)) * 100),2),"%"
-    print "Accuracy, +-1 league: ",
+    #print "Error rate: ",
+    #print round(abs(100 - (TPd/float(Pd)) * 100),2),"%"
+    print ", +-1 league: ",
     print round(TPd1/float(Pd) * 100,2),"%",""
 
     print tabulate(matrix_league, headers= ['League', 1, 2, 3, 4, 5, 6, 7, 8, "Total", "Recognition "])

@@ -13,8 +13,8 @@ from tabulate import tabulate
 
 def main():
     table = read_csv('StarCraft2ReplayAnalysis-Processed-SelectAttr.txt')
-    get_accuracy_knn(table,50)     #2nd param changes number of instances to test
-    #predict_league_knn_visual(table)
+    get_accuracy_knn(table,100)     #2nd param changes number of instances to test
+    predict_league_knn_visual(table)
 
 def get_accuracy_knn(table,num_instances):
     """runs KNN over specific number of instances, finds accuracy
@@ -56,7 +56,6 @@ def get_accuracy_knn(table,num_instances):
     accuracy1 = round(accuracy1*100,2)
     print "K-NN,", num_instances,"instances"
     print "Accuracy:", accuracy,"%, ", "+-1 league:", accuracy1,"%"
-    print "Error Rate:", 100-accuracy,"%, ", "+-1 league:", 100-accuracy1,"%"
 
     i = 0
     #add total and recognition rates to matrix
@@ -93,8 +92,8 @@ def predict_league_knn_visual(table):
         league_pred = round(league_avg)
         
         league_actual = int(instance[0])
-        print "instance:", instance
-        print "league:", league_pred, "actual league:", league_actual
+        #print "instance:", instance
+        #print "league:", league_pred, "actual league:", league_actual
 
 
 def k_NN_classifier(table, instance):

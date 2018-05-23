@@ -26,8 +26,8 @@ def regression_visual(table):
         instance = table[it]
         league_pred = k_NN_classifier(table,instance)
         league_actual = int(instance[0])
-        print "instance:", instance
-        print "league:", league_pred, "actual league:", league_actual
+        #print "instance:", instance
+        #print "league:", league_pred, "actual league:", league_actual
 
 
 def get_accuracy_regression(table):
@@ -79,7 +79,7 @@ def get_accuracy_regression(table):
     accuracy1 = round(accuracy1*100,2)
     print "Regression Ensemble"
     print "Accuracy:", accuracy,"%, ", "+-1 league:", accuracy1,"%"
-    print "Error Rate:", 100-accuracy,"%, ", "+-1 league:", 100-accuracy1,"%"
+    #print "Error Rate:", 100-accuracy,"%, ", "+-1 league:", 100-accuracy1,"%"
 
     i = 0
     for row in matrix_league:
